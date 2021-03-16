@@ -10,9 +10,6 @@
         <div class="body">
             <div>
                 <h3 class="h3">Login</h3>
-                <div class="invalido">
-                    <p>Nome ou senha inválido</p>
-                </div>
                 <div class="box">
                     <form action="login.php" method="POST">
                         <div class="campo">
