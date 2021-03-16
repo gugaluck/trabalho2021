@@ -10,7 +10,7 @@ session_start();
                 <?php
                     if(isset($_SESSION['nao_autenticado'])):
                 ?>
-                <div class="notification is-danger">
+                <div>
                     <p>Nome ou senha inválidos</p>
                 </div>
                 <?php
