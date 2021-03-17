@@ -6,7 +6,7 @@ require_once __DIR__."/libs/Div.class.php";
 require_once __DIR__."/libs/Meta.class.php";
 require_once __DIR__."/libs/Head.class.php";
 require_once __DIR__."/libs/Title.class.php";
-
+/* 
 $metaCharset = new Meta("UTF-8");
 $metaHttEquiv = new Meta(null, null, "X-UA-Compatible", "IE=edge");
 $metaName = new Meta(null, "viewport", null, "width=device-width, initial-scale=1.0");
@@ -26,7 +26,7 @@ $container = new Div("container");
 $html = new Html("pt-br", $head, $body);
 
 echo $html;
-
+*/
 if(isset($_SESSION['nao_autenticado'])):
 ?>
 <div>
@@ -36,6 +36,7 @@ if(isset($_SESSION['nao_autenticado'])):
     endif;
     unset($_SESSION['nao_autenticado']);
 ?>
+<h3>LOGIN</h3>
 <div class="box">
     <form action="login.php" method="POST">
         <div class="campo">
