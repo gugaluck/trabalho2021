@@ -73,5 +73,9 @@ $body->addElement($container);
 $html = new Html("pt-br", $head, $body);
 
 echo $html;
-
 ?>
+
+<hr>
+    <a href="index.php" class="btn btn-default">Inicio</a>
+    <a href="cadastro.php" class="btn btn-success">Cadastrar</a>
+<hr>
