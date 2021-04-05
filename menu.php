@@ -76,6 +76,6 @@ echo $html;
 ?>
 
 <hr>
-    <a href="index.php" class="btn btn-default">Inicio</a>
+    <a href="index.php" class="btn btn-default">Voltar para o início</a>
     <a href="cadastro.php" class="btn btn-success">Cadastrar</a>
 <hr>
