@@ -21,6 +21,10 @@ require_once __DIR__."/libs/Texto.class.php";
 require_once __DIR__."/libs/Title.class.php";
 require_once __DIR__."/libs/ul.class.php";
 require_once __DIR__."/libs/video.class.php";
+require_once __DIR__."/crud/create.php";
+require_once __DIR__."/crud/delete.php";
+require_once __DIR__."/crud/read.php";
+require_once __DIR__."/crud/update.php";
 
 $metaCharset = new Meta("UTF-8");
 $metaHttEquiv = new Meta(null, null, "X-UA-Compatible", "IE=edge");
@@ -73,6 +77,29 @@ $body->addElement($container);
 $html = new Html("pt-br", $head, $body);
 
 echo $html;
+
+$contato1 = new Contato( "3", "gudfgdf", "teste@teste", "1", "10/10", "10/10");
+
+$PersitenciaContato1 = new Contato();
+if($PersitenciaContato1->create($contato1)){
+       echo 'Inserido no banco';
+}
+
+var_dump($PersitenciaContato1->read(1));
+$contato2 = $PersitenciaContato1->read(1);
+
+$contato1->setNome("gustavo");
+$contato1->setEmail("teste@testewfew");
+
+if($PersitenciaContato1->update($contato1)){
+       echo 'Atualizado no banco';
+}
+
+var_dump($PersitenciaContato1->read(1));
+if($PersitenciaContato1->delete(1)){
+    echo 'Excluído do banco';
+}
+
 ?>
 
 <hr>
